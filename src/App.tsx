@@ -122,6 +122,31 @@ export default function App() {
     }
   }, [lang, theme]);
 
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const elements = document.querySelectorAll<HTMLElement>('[data-scroll-reveal]');
+    if (!elements.length) return;
+
+    document.documentElement.classList.add('scroll-reveal-ready');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('scroll-reveal-visible');
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove('scroll-reveal-ready');
+    };
+  }, []);
+
   const handleLanguageChange = (nextLang: Lang) => {
     setLang(nextLang);
     setFormState((prev) => {
@@ -228,6 +253,12 @@ export default function App() {
               aria-label="Primary navigation"
             >
               <a
+                href="#services"
+                className="hover:text-slate-950 dark:hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent hover:border-sky-600 dark:hover:border-sky-400"
+              >
+                {t.nav.services}
+              </a>
+              <a
                 href="#ptcl-offers"
                 className="hover:text-[#007A33] dark:hover:text-emerald-400 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent hover:border-[#007A33] dark:hover:border-emerald-400"
               >
@@ -238,12 +269,6 @@ export default function App() {
                 className="hover:text-slate-950 dark:hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent hover:border-sky-600 dark:hover:border-sky-400"
               >
                 {t.nav.hardware3d}
-              </a>
-              <a
-                href="#services"
-                className="hover:text-slate-950 dark:hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent hover:border-sky-600 dark:hover:border-sky-400"
-              >
-                {t.nav.services}
               </a>
               <a
                 href="#about"
@@ -334,6 +359,13 @@ export default function App() {
             <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl px-4 py-4 space-y-2 shadow-xl">
               <div className="grid grid-cols-1 gap-1">
                 <a
+                  href="#services"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center min-h-[46px] px-3.5 rounded-xl text-sm font-medium text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900"
+                >
+                  {t.nav.mobileServices}
+                </a>
+                <a
                   href="#ptcl-offers"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center min-h-[46px] px-3.5 rounded-xl text-sm font-semibold text-[#007A33] dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-slate-900"
@@ -346,13 +378,6 @@ export default function App() {
                   className="flex items-center min-h-[46px] px-3.5 rounded-xl text-sm font-medium text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900"
                 >
                   {t.nav.mobileHardware3d}
-                </a>
-                <a
-                  href="#services"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center min-h-[46px] px-3.5 rounded-xl text-sm font-medium text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900"
-                >
-                  {t.nav.mobileServices}
                 </a>
                 <a
                   href="#about"
@@ -626,7 +651,10 @@ export default function App() {
             id="ptcl-offers"
             className="py-10 sm:py-20 bg-slate-50 dark:bg-slate-900/55 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors"
           >
-            <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
+            <div
+              data-scroll-reveal="left"
+              className="scroll-reveal scroll-reveal-left max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8"
+            >
               <PtclOffersHub lang={lang} onBookPackage={handleBookPtclOffer} />
             </div>
           </section>
@@ -637,8 +665,11 @@ export default function App() {
             className="py-10 sm:py-20 bg-slate-100 dark:bg-slate-900/50 text-slate-950 dark:text-white border-b border-slate-200/80 dark:border-slate-800/80 transition-colors"
           >
             <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-5 sm:space-y-10">
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4">
-                <div className="max-w-2xl">
+              <div
+                data-scroll-reveal="right"
+                className="scroll-reveal scroll-reveal-right flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4"
+              >
+                <div data-scroll-reveal="left" className="scroll-reveal scroll-reveal-left max-w-2xl">
                   <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
                     {t.hardware3d.kicker}
                   </p>
@@ -651,7 +682,9 @@ export default function App() {
                 </p>
               </div>
 
-              <ThreeHardwareShowcase lang={lang} theme={theme} />
+              <div data-scroll-reveal="left" className="scroll-reveal scroll-reveal-left">
+                <ThreeHardwareShowcase lang={lang} theme={theme} />
+              </div>
             </div>
           </section>
 
@@ -673,7 +706,9 @@ export default function App() {
                 </p>
               </div>
 
-              <AnimatedTopologyIllustration lang={lang} />
+              <div data-scroll-reveal="right" className="scroll-reveal scroll-reveal-right">
+                <AnimatedTopologyIllustration lang={lang} />
+              </div>
 
               {/* Core Technician Services Bento Grid */}
               <div id="services" className="pt-2 sm:pt-4">
@@ -856,7 +891,10 @@ export default function App() {
           >
             <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-stretch">
-                <div className="lg:col-span-5 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-900 shadow-lg aspect-[16/10] sm:aspect-[4/5] lg:aspect-auto lg:min-h-[400px]">
+                <div
+                  data-scroll-reveal="left"
+                  className="scroll-reveal scroll-reveal-left lg:col-span-5 rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-900 shadow-lg aspect-[16/10] sm:aspect-[4/5] lg:aspect-auto lg:min-h-[400px]"
+                >
                   <ResilientImage
                     src={HERO_IMAGE}
                     alt="Structured network server rack and PTCL fiber installation by Faizullah Khan"
@@ -866,7 +904,10 @@ export default function App() {
                   />
                 </div>
 
-                <div className="lg:col-span-7 flex flex-col justify-between py-0.5 sm:py-1">
+                <div
+                  data-scroll-reveal="right"
+                  className="scroll-reveal scroll-reveal-right lg:col-span-7 flex flex-col justify-between py-0.5 sm:py-1"
+                >
                   <div>
                     <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
                       {t.about.kicker}
@@ -916,7 +957,10 @@ export default function App() {
           >
             <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-start">
-                <div className="lg:col-span-5 space-y-5 sm:space-y-6">
+                <div
+                  data-scroll-reveal="left"
+                  className="scroll-reveal scroll-reveal-left lg:col-span-5 space-y-5 sm:space-y-6"
+                >
                   <div>
                     <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
                       {t.contact.kicker}
@@ -979,7 +1023,10 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-7">
+                <div
+                  data-scroll-reveal="right"
+                  className="scroll-reveal scroll-reveal-right lg:col-span-7"
+                >
                   <div className="rounded-2xl sm:rounded-3xl bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 p-4 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-lg sm:shadow-xl dark:shadow-2xl">
                     {submitted ? (
                       <div className="py-6 sm:py-8 text-center space-y-4">
@@ -1314,6 +1361,11 @@ export default function App() {
                 {t.footer.links.contact}
               </a>
             </div>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-5 border-t border-slate-800/80 dark:border-slate-900 flex items-center justify-center">
+            <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-500 tracking-wide">
+              {t.footer.poweredBy}
+            </p>
           </div>
         </footer>
 

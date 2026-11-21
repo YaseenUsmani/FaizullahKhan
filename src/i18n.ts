@@ -51,6 +51,11 @@ export const TRANSLATIONS = {
       title: 'PTCL Services & Special Offers',
       description:
         'Compare PTCL Flash Fiber (FTTH), Broadband DSL unlimited tiers, SHOQ Smart TV, Fixed Line, and promotional double-speed bundles—with local exchange check & installation in Mingora, Swat.',
+      details: [
+        { label: 'Coverage Check', value: 'Mingora & Swat exchange availability' },
+        { label: 'Complete Setup', value: 'ONT, router, LAN & Wi-Fi optimization' },
+        { label: 'Support', value: 'Installation, activation & fault assistance' },
+      ],
       helplineLabel: 'PTCL Official Helpline',
       localDeskLabel: 'Swat Connection & ONT Setup',
       disclaimer:
@@ -432,6 +437,7 @@ export const TRANSLATIONS = {
     },
     footer: {
       roleLine: 'Wi-Fi, CCTV & Networking Technician · Mingora, Swat',
+      poweredBy: 'Powered by YaseenUsmani',
       links: {
         ptclOffers: 'PTCL Offers',
         hardware: '3D Hardware',
@@ -490,6 +496,11 @@ export const TRANSLATIONS = {
       title: 'پی ٹی سی ایل سروسز اور خصوصی آفرز',
       description:
         'پی ٹی سی ایل فلیش فائبر (FTTH)، براڈبینڈ ڈی ایس ایل، SHOQ اسمارٹ ٹی وی، فکسڈ لائن اور ڈبل اسپیڈ پرومو آفرز دیکھیں—مینگورہ اور سوات میں مقامی ایکسچینج چیک اور تنصیب کے ساتھ۔',
+      details: [
+        { label: 'کوریج چیک', value: 'مینگورہ اور سوات میں ایکسچینج کی دستیابی' },
+        { label: 'مکمل سیٹ اپ', value: 'ONT، راؤٹر، LAN اور وائی فائی ٹیوننگ' },
+        { label: 'سپورٹ', value: 'انسٹالیشن، ایکٹیویشن اور فالٹ اسسٹنس' },
+      ],
       helplineLabel: 'پی ٹی سی ایل آفیشل ہیلپ لائن',
       localDeskLabel: 'سوات کنکشن اور ONT سیٹ اپ',
       disclaimer:
@@ -871,6 +882,7 @@ export const TRANSLATIONS = {
     },
     footer: {
       roleLine: 'وائی فائی، سی سی ٹی وی اور نیٹ ورکنگ ٹیکنیشن · مینگورہ، سوات',
+      poweredBy: 'Powered by YaseenUsmani',
       links: {
         ptclOffers: 'پی ٹی سی ایل آفرز',
         hardware: 'تھری ڈی ہارڈویئر',

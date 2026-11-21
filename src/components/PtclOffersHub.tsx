@@ -85,6 +85,27 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
         </div>
       </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4">
+        {offers.details.map((detail, index) => (
+          <div
+            key={detail.label}
+            className="flex items-start gap-3 rounded-xl sm:rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white/85 dark:bg-slate-900/80 px-3 py-3 sm:px-4 sm:py-4"
+          >
+            <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-[#007A33] dark:text-emerald-400 flex items-center justify-center text-[11px] sm:text-xs font-bold font-mono shrink-0">
+              0{index + 1}
+            </span>
+            <div className="min-w-0">
+              <p className="text-[10.5px] sm:text-xs font-semibold text-slate-950 dark:text-white">
+                {detail.label}
+              </p>
+              <p className="mt-0.5 text-[10.5px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                {detail.value}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
       {/* 4 Interactive PTCL Service & Offer Tabs */}
       <div
         role="tablist"
