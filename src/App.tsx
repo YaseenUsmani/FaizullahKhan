@@ -28,13 +28,13 @@ import { ThreeHardwareShowcase } from './components/ThreeHardwareShowcase';
 import { PtclOffersHub } from './components/PtclOffersHub';
 import { WhatsAppIcon } from './components/WhatsAppIcon';
 import { Lang, Theme, TRANSLATIONS } from './i18n';
+import HERO_IMAGE from './assets/images/hero_network_datacenter_1795021570206.jpg';
+import CCTV_IMAGE from './assets/images/service_cctv_cameras_1795021988626.jpg';
+import WIRELESS_IMAGE from './assets/images/service_wireless_campus_1795021571956.jpg';
+import FIBER_IMAGE from './assets/images/service_fiber_optics_1795021571817.jpg';
+import WORKBENCH_IMAGE from './assets/images/service_wifi_technician_1795021989595.jpg';
 
-const HERO_IMAGE = '/src/assets/images/hero_network_datacenter_1795021570206.jpg';
 const PORTRAIT_IMAGE = '/assets/aistudio/Internet_Engineer__Connecting_the_World_da06f7d4.png';
-const CCTV_IMAGE = '/src/assets/images/service_cctv_cameras_1795021988626.jpg';
-const WIRELESS_IMAGE = '/src/assets/images/service_wireless_campus_1795021571956.jpg';
-const FIBER_IMAGE = '/src/assets/images/service_fiber_optics_1795021571817.jpg';
-const WORKBENCH_IMAGE = '/src/assets/images/service_wifi_technician_1795021989595.jpg';
 
 interface FormErrors {
   name?: string;
@@ -492,7 +492,7 @@ export default function App() {
                   transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
                   className="order-1 lg:order-2 lg:col-span-6 flex items-center justify-center"
                 >
-                  <div className="w-[95%] sm:w-full sm:max-w-[440px] lg:max-w-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-emerald-500/40 dark:border-emerald-500/50 bg-[#0B2241] shadow-xl sm:shadow-2xl flex flex-col">
+                  <div className="w-full sm:max-w-[440px] lg:max-w-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-emerald-500/40 dark:border-emerald-500/50 bg-[#0B2241] shadow-xl sm:shadow-2xl flex flex-col">
                     <div
                       className="h-1.5 w-full bg-gradient-to-r from-[#007A33] via-[#65B32E] to-[#0EA5E9]"
                       aria-hidden="true"
@@ -505,17 +505,17 @@ export default function App() {
                         className="w-full h-full object-cover object-center"
                       />
                     </div>
-                    <div className="px-3 py-2 sm:px-6 sm:py-4 bg-gradient-to-r from-[#0B2241] via-[#0F2D54] to-[#083828] flex items-center justify-between gap-2 text-white border-t border-emerald-500/30">
-                      <div className="min-w-0">
-                        <p className="text-[10px] sm:text-xs font-semibold tracking-wide text-[#86EFAC] truncate">
+                    <div className="px-3 py-2 sm:px-6 sm:py-4 bg-gradient-to-r from-[#0B2241] via-[#0F2D54] to-[#083828] flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-2 text-white border-t border-emerald-500/30">
+                      <div className="min-w-0 w-full sm:w-auto">
+                        <p className="text-[10px] sm:text-xs font-semibold tracking-wide text-[#86EFAC]">
                           {t.hero.imageTag}
                         </p>
-                        <p className="font-display text-xs sm:text-base font-semibold tracking-tight mt-0.5 truncate">
+                        <p className="font-display text-xs sm:text-base font-semibold tracking-tight mt-0.5">
                           {t.hero.imageTitle}
                         </p>
                       </div>
                       <div
-                        className="inline-flex items-center gap-1.5 rounded-lg sm:rounded-xl bg-white/10 px-2 py-1 sm:px-2.5 sm:py-1.5 border border-white/15 text-[10px] sm:text-xs font-mono font-semibold text-white shrink-0"
+                        className="inline-flex items-center gap-1.5 rounded-lg sm:rounded-xl bg-white/10 px-2 py-1 sm:px-2.5 sm:py-1.5 border border-white/15 text-[10px] sm:text-xs font-mono font-semibold text-white shrink-0 self-start sm:self-auto"
                         dir="ltr"
                       >
                         <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#65B32E]" aria-hidden="true" />
@@ -530,9 +530,9 @@ export default function App() {
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="order-2 lg:order-1 lg:col-span-6 flex flex-col justify-center py-0.5 sm:py-2"
+                  className="order-2 lg:order-1 lg:col-span-6 flex flex-col justify-center py-0.5 sm:py-2 text-center sm:text-start"
                 >
-                  <p className="text-[10.5px] sm:text-sm font-semibold tracking-wide text-[#007A33] dark:text-emerald-400 mb-1.5 sm:mb-3">
+                  <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#007A33] dark:text-emerald-400 mb-1.5 sm:mb-3">
                     {t.hero.kicker}
                   </p>
 
@@ -543,12 +543,12 @@ export default function App() {
                     {t.hero.title}
                   </h1>
 
-                  <p className="mt-2 sm:mt-5 text-xs sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+                  <p className="mt-2 sm:mt-5 text-sm sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mx-auto sm:mx-0">
                     {t.hero.description}
                   </p>
 
                   {/* 4 PTCL Core Services Strip (Compact on Mobile) */}
-                  <div className="mt-3 sm:mt-5 grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 max-w-xl">
+                  <div className="mt-3 sm:mt-5 grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 max-w-xl mx-auto sm:mx-0 w-full">
                     {[
                       { label: t.hero.ptclHighlights[0], Icon: Wifi },
                       { label: t.hero.ptclHighlights[1], Icon: Globe },
@@ -557,7 +557,7 @@ export default function App() {
                     ].map(({ label, Icon }) => (
                       <div
                         key={label}
-                        className="flex items-center gap-1.5 sm:gap-2 rounded-lg sm:rounded-xl bg-emerald-50/75 dark:bg-emerald-950/35 border border-emerald-200/80 dark:border-emerald-800/60 px-2 py-1 sm:px-2.5 sm:py-2 text-[10.5px] sm:text-xs font-semibold text-[#0B2241] dark:text-emerald-200"
+                        className="flex items-center gap-1.5 sm:gap-2 rounded-lg sm:rounded-xl bg-emerald-50/75 dark:bg-emerald-950/35 border border-emerald-200/80 dark:border-emerald-800/60 px-2 py-1.5 sm:px-2.5 sm:py-2 text-xs font-semibold text-[#0B2241] dark:text-emerald-200"
                       >
                         <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#007A33] dark:text-emerald-400 shrink-0" />
                         <span className="truncate">{label}</span>
@@ -566,10 +566,10 @@ export default function App() {
                   </div>
 
                   {/* Primary & Card CTA Buttons (Compact Height on Mobile) */}
-                  <div className="mt-2.5 sm:mt-7 grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-1.5 sm:gap-4">
+                  <div className="mt-2.5 sm:mt-7 grid grid-cols-1 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2 sm:gap-4">
                     <a
                       href="#contact"
-                      className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-6 py-1.5 sm:py-3.5 min-h-[38px] sm:min-h-[48px] rounded-lg sm:rounded-xl bg-[#007A33] hover:bg-[#00662A] dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white text-[11px] sm:text-sm font-semibold transition-colors shadow-sm whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+                      className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3.5 min-h-[44px] sm:min-h-[48px] rounded-lg sm:rounded-xl bg-[#007A33] hover:bg-[#00662A] dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold transition-colors shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                     >
                       <span className="truncate">{t.hero.ctaPrimary}</span>
                       <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 rtl:rotate-180 shrink-0" />
@@ -577,7 +577,7 @@ export default function App() {
 
                     <a
                       href="#ptcl-offers"
-                      className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-5 py-1.5 sm:py-3.5 min-h-[38px] sm:min-h-[48px] rounded-lg sm:rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-[11px] sm:text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+                      className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-3.5 min-h-[44px] sm:min-h-[48px] rounded-lg sm:rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-xs sm:text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                     >
                       <Wifi className="w-3 h-3 sm:w-4 sm:h-4 text-[#007A33] dark:text-emerald-400 shrink-0" />
                       <span className="truncate">{t.hero.ctaSecondary}</span>
@@ -585,7 +585,7 @@ export default function App() {
                   </div>
 
                   <div className="mt-3.5 sm:mt-8 pt-3 sm:pt-6 border-t border-slate-200/80 dark:border-slate-800">
-                    <div className="rounded-xl sm:rounded-none bg-slate-50 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-800 px-2.5 py-2 sm:p-0 sm:bg-transparent sm:dark:bg-transparent sm:border-0 flex flex-wrap items-center justify-between sm:justify-start gap-x-3 gap-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                    <div className="rounded-xl sm:rounded-none bg-slate-50 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-800 px-2.5 py-2 sm:p-0 sm:bg-transparent sm:dark:bg-transparent sm:border-0 flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                       <div className="inline-flex items-center gap-1.5 sm:gap-2" dir="ltr">
                         <a
                           href="tel:03421229495"
@@ -625,7 +625,7 @@ export default function App() {
               </div>
 
               {/* Full-Width 4-Column Capabilities Strip */}
-              <div className="mt-4 sm:mt-14 pt-4 sm:pt-8 border-t border-slate-200/80 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-6 lg:gap-8">
+              <div className="mt-4 sm:mt-14 pt-4 sm:pt-8 border-t border-slate-200/80 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-6 lg:gap-8 text-center sm:text-start">
                 {t.hero.metrics.map((item) => (
                   <div
                     key={item.value}
@@ -637,7 +637,7 @@ export default function App() {
                     >
                       {item.value}
                     </p>
-                    <p className="mt-0.5 sm:mt-1 text-[10.5px] sm:text-sm text-slate-600 dark:text-slate-400 leading-snug">
+                    <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-snug">
                       {item.label}
                     </p>
                   </div>
@@ -667,9 +667,9 @@ export default function App() {
             <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-5 sm:space-y-10">
               <div
                 data-scroll-reveal="right"
-                className="scroll-reveal scroll-reveal-right flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4"
+                className="scroll-reveal scroll-reveal-right flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 text-center sm:text-start"
               >
-                <div data-scroll-reveal="left" className="scroll-reveal scroll-reveal-left max-w-2xl">
+                <div data-scroll-reveal="left" className="scroll-reveal scroll-reveal-left max-w-2xl mx-auto sm:mx-0 text-center sm:text-start">
                   <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
                     {t.hardware3d.kicker}
                   </p>
@@ -677,7 +677,7 @@ export default function App() {
                     {t.hardware3d.title}
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-sm">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-sm mx-auto sm:mx-0">
                   {t.hardware3d.hint}
                 </p>
               </div>
@@ -694,7 +694,7 @@ export default function App() {
             className="py-10 sm:py-20 bg-white dark:bg-slate-950 transition-colors"
           >
             <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-8 sm:space-y-14">
-              <div className="max-w-2xl">
+              <div className="max-w-2xl mx-auto text-center sm:mx-0 sm:text-start">
                 <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
                   {t.topology.sectionKicker}
                 </p>
@@ -713,7 +713,7 @@ export default function App() {
               {/* Core Technician Services Bento Grid */}
               <div id="services" className="pt-2 sm:pt-4">
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 mb-6 sm:mb-8">
-                  <div>
+                  <div className="text-center sm:text-start">
                     <p className="text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5">
                       {t.services.kicker}
                     </p>
@@ -723,7 +723,7 @@ export default function App() {
                   </div>
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 whitespace-nowrap shrink-0 min-h-[40px]"
+                    className="inline-flex self-center sm:self-auto items-center gap-1.5 text-sm font-semibold text-sky-700 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 whitespace-nowrap shrink-0 min-h-[40px]"
                   >
                     <span>{t.services.cta}</span>
                     <ArrowUpRight className="w-4 h-4 rtl:-scale-x-100" />
@@ -740,7 +740,7 @@ export default function App() {
                     className="group lg:col-span-2 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/70 overflow-hidden grid grid-cols-1 md:grid-cols-2 items-stretch hover:border-slate-300 dark:hover:border-slate-700 transition-colors"
                   >
                     <div className="p-4 sm:p-8 flex flex-col justify-between order-2 md:order-1">
-                      <div>
+                      <div className="text-center sm:text-start">
                         <p className="text-xs font-mono font-semibold text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
                           {card0.index}
                         </p>
@@ -906,7 +906,7 @@ export default function App() {
 
                 <div
                   data-scroll-reveal="right"
-                  className="scroll-reveal scroll-reveal-right lg:col-span-7 flex flex-col justify-between py-0.5 sm:py-1"
+                  className="scroll-reveal scroll-reveal-right lg:col-span-7 flex flex-col justify-between py-0.5 sm:py-1 text-center sm:text-start"
                 >
                   <div>
                     <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
@@ -959,7 +959,7 @@ export default function App() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-12 items-start">
                 <div
                   data-scroll-reveal="left"
-                  className="scroll-reveal scroll-reveal-left lg:col-span-5 space-y-5 sm:space-y-6"
+                  className="scroll-reveal scroll-reveal-left lg:col-span-5 space-y-5 sm:space-y-6 text-center sm:text-start"
                 >
                   <div>
                     <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-sky-700 dark:text-sky-400 mb-1.5 sm:mb-2">
@@ -974,7 +974,7 @@ export default function App() {
                   </div>
 
                   <div className="pt-4 border-t border-slate-300/80 dark:border-slate-800 space-y-4 text-sm">
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-center justify-center sm:justify-start gap-3 text-start">
                       <Phone className="w-5 h-5 text-sky-600 dark:text-sky-400 mt-0.5 shrink-0" />
                       <div>
                         <p className="text-slate-500 dark:text-slate-400 text-xs">
@@ -1009,7 +1009,7 @@ export default function App() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-center justify-center sm:justify-start gap-3 text-start">
                       <MapPin className="w-5 h-5 text-sky-600 dark:text-sky-400 mt-0.5 shrink-0" />
                       <div>
                         <p className="text-slate-500 dark:text-slate-400 text-xs">

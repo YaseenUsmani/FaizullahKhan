@@ -73,11 +73,6 @@
   transform: translate3d(64px, 0, 0);
 }
 
-.scroll-reveal-ready .scroll-reveal-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
 @media (max-width: 640px) {
   .scroll-reveal-ready .scroll-reveal-left {
     transform: translate3d(-32px, 0, 0);
@@ -86,6 +81,11 @@
   .scroll-reveal-ready .scroll-reveal-right {
     transform: translate3d(32px, 0, 0);
   }
+}
+
+.scroll-reveal-ready .scroll-reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 @media (prefers-reduced-motion: reduce) {

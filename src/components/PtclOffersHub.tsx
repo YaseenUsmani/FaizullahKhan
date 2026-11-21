@@ -52,28 +52,28 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
   return (
     <div className="space-y-4 sm:space-y-8">
       {/* Section Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2.5 sm:gap-6">
-        <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 mb-1 sm:mb-2">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2.5 sm:gap-6 text-center sm:text-start">
+        <div className="max-w-2xl mx-auto sm:mx-0">
+          <div className="inline-flex items-center justify-center gap-2 mb-1 sm:mb-2 sm:justify-start">
             <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" fill="none" aria-hidden="true">
               <circle cx="12" cy="12" r="10" stroke="#65B32E" strokeWidth="2.2" strokeDasharray="48 12" />
               <circle cx="12" cy="12" r="6" stroke="#007A33" strokeWidth="2" strokeDasharray="28 10" />
               <circle cx="12" cy="12" r="2.4" fill="#007A33" />
             </svg>
-            <p className="text-[10.5px] sm:text-xs font-semibold tracking-wide text-[#007A33] dark:text-emerald-400">
+            <p className="text-xs font-semibold tracking-wide text-[#007A33] dark:text-emerald-400">
               {offers.kicker}
             </p>
           </div>
-          <h2 className="font-display text-lg sm:text-4xl font-bold tracking-[-0.02em] text-slate-950 dark:text-white text-balance">
+          <h2 className="font-display text-xl sm:text-4xl font-bold tracking-[-0.02em] text-slate-950 dark:text-white text-balance">
             {offers.title}
           </h2>
-          <p className="mt-1.5 sm:mt-2 text-[11.5px] sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
             {offers.description}
           </p>
         </div>
 
         <div
-          className="self-start sm:self-auto inline-flex items-center gap-2 sm:block rounded-lg sm:rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 text-xs shrink-0"
+          className="self-center sm:self-auto inline-flex items-center gap-2 sm:block rounded-lg sm:rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 text-xs shrink-0"
           dir="ltr"
         >
           <span className="text-[10.5px] sm:text-[11px] text-slate-500 dark:text-slate-400 sm:block">
@@ -89,16 +89,16 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
         {offers.details.map((detail, index) => (
           <div
             key={detail.label}
-            className="flex items-start gap-3 rounded-xl sm:rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white/85 dark:bg-slate-900/80 px-3 py-3 sm:px-4 sm:py-4"
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-2.5 sm:gap-3 rounded-xl sm:rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white/85 dark:bg-slate-900/80 px-3 py-3 sm:px-4 sm:py-4 text-center sm:text-start"
           >
             <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-[#007A33] dark:text-emerald-400 flex items-center justify-center text-[11px] sm:text-xs font-bold font-mono shrink-0">
               0{index + 1}
             </span>
             <div className="min-w-0">
-              <p className="text-[10.5px] sm:text-xs font-semibold text-slate-950 dark:text-white">
+              <p className="text-xs font-semibold text-slate-950 dark:text-white">
                 {detail.label}
               </p>
-              <p className="mt-0.5 text-[10.5px] sm:text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 {detail.value}
               </p>
             </div>
@@ -128,7 +128,7 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
                   scrollerRef.current.scrollTo({ left: 0, behavior: 'auto' });
                 }
               }}
-              className={`inline-flex items-center justify-start sm:justify-center gap-2 min-h-[42px] sm:min-h-[46px] px-2.5 sm:px-3.5 py-1.5 rounded-xl text-[11px] sm:text-sm font-semibold transition-all cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007A33]/60 dark:focus-visible:ring-emerald-400/60 ${
+              className={`inline-flex items-center justify-start sm:justify-center gap-2 min-h-[44px] sm:min-h-[46px] px-2.5 sm:px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007A33]/60 dark:focus-visible:ring-emerald-400/60 ${
                 isActive
                   ? 'bg-gradient-to-r from-[#007A33] to-[#0B5D3B] dark:from-emerald-600 dark:to-teal-600 text-white border border-transparent shadow-md shadow-emerald-950/15'
                   : 'bg-white dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border border-slate-200/90 dark:border-slate-700/80 shadow-2xs hover:border-emerald-300 dark:hover:border-emerald-700 hover:text-[#007A33] dark:hover:text-emerald-300'
@@ -162,11 +162,11 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
           const data = activeTab === 'fiber' ? offers.fiber : offers.broadband;
           return (
             <>
-              <div className="rounded-xl sm:rounded-2xl border border-emerald-200/80 dark:border-emerald-900/60 bg-gradient-to-r from-emerald-50/85 via-white to-sky-50/60 dark:from-emerald-950/30 dark:via-slate-900 dark:to-sky-950/20 p-3 sm:p-5">
+              <div className="rounded-xl sm:rounded-2xl border border-emerald-200/80 dark:border-emerald-900/60 bg-gradient-to-r from-emerald-50/85 via-white to-sky-50/60 dark:from-emerald-950/30 dark:via-slate-900 dark:to-sky-950/20 p-3 sm:p-5 text-center sm:text-start">
                 <h3 className="font-display text-xs sm:text-lg font-bold text-[#0B2241] dark:text-emerald-200">
                   {data.summaryTitle}
                 </h3>
-                <p className="mt-1 text-[11px] sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed line-clamp-3 sm:line-clamp-none">
+                <p className="mt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed line-clamp-3 sm:line-clamp-none">
                   {data.summaryDesc}
                 </p>
               </div>
@@ -207,7 +207,7 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
                   return (
                     <article
                       key={plan.speed}
-                      className={`snap-start shrink-0 w-[74vw] max-w-[260px] sm:w-auto sm:max-w-none rounded-2xl border overflow-hidden flex flex-col justify-between transition-all ${
+                      className={`snap-center shrink-0 w-[calc(100vw-48px)] max-w-[340px] sm:w-auto sm:max-w-none rounded-2xl border overflow-hidden flex flex-col justify-between transition-all ${
                         isFeatured
                           ? 'border-[#007A33]/80 dark:border-emerald-500/80 bg-white dark:bg-slate-900 shadow-md shadow-emerald-950/10'
                           : 'border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-sm hover:border-emerald-300 dark:hover:border-slate-700'
@@ -230,7 +230,7 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
                           }`}
                         >
                           <div className="min-w-0">
-                            <p className="text-[10px] sm:text-[11px] font-semibold tracking-wide text-[#007A33] dark:text-emerald-400 truncate">
+                            <p className="text-[11px] font-semibold tracking-wide text-[#007A33] dark:text-emerald-400 truncate">
                               {plan.tag}
                             </p>
                             <h4
@@ -251,7 +251,7 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
                         </div>
 
                         <div className="px-3 pt-2.5 sm:px-5 sm:pt-3.5">
-                          <p className="text-[11px] sm:text-xs font-medium text-slate-600 dark:text-slate-300 line-clamp-1 sm:line-clamp-none">
+                          <p className="text-xs font-medium text-slate-600 dark:text-slate-300 line-clamp-2 sm:line-clamp-none">
                             {plan.useCase}
                           </p>
 
@@ -259,10 +259,10 @@ export function PtclOffersHub({ lang, onBookPackage }: PtclOffersHubProps) {
                             {plan.features.map((feat) => (
                               <li
                                 key={feat}
-                                className="flex items-start gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-slate-700 dark:text-slate-300 leading-snug"
+                                className="flex items-start gap-1.5 sm:gap-2 text-xs text-slate-700 dark:text-slate-300 leading-snug"
                               >
                                 <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#007A33] dark:text-emerald-400 mt-0.5 shrink-0" />
-                                <span className="line-clamp-1 sm:line-clamp-none">{feat}</span>
+                                <span className="line-clamp-2 sm:line-clamp-none">{feat}</span>
                               </li>
                             ))}
                           </ul>
