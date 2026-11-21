@@ -1,0 +1,883 @@
+export type Lang = 'en' | 'ur';
+export type Theme = 'light' | 'dark';
+
+export const TRANSLATIONS = {
+  en: {
+    brand: 'Faizullah Khan',
+    nav: {
+      ptclOffers: 'PTCL Offers',
+      hardware3d: '3D Hardware',
+      services: 'Services',
+      about: 'About',
+      bookBtn: 'Book Technician',
+      mobilePtclOffers: 'PTCL Services & Offers',
+      mobileHardware3d: '3D Hardware Inspector',
+      mobileServices: 'Wi-Fi, CCTV & Networking',
+      mobileAbout: 'About Technician',
+    },
+    controls: {
+      languageLabel: 'Language',
+      themeLabel: 'Appearance',
+      light: 'Light',
+      dark: 'Dark',
+      english: 'English',
+      englishShort: 'EN',
+      urdu: 'اردو',
+      toggleTheme: 'Switch light or dark theme',
+      mobileCall: 'Call Now',
+      mobileWhatsapp: 'WhatsApp',
+      mobileBook: 'Book Visit',
+    },
+    hero: {
+      kicker: 'PTCL FTTH · Wi-Fi, CCTV & Networking Engineer · Mingora, Swat',
+      title: 'PTCL Fiber, Wi-Fi, CCTV & Network Engineering',
+      description:
+        'Faizullah Khan delivers clean, dependable installations across Mingora and Swat—spanning PTCL FTTH Fiber & Broadband, Wi-Fi routers, night-vision CCTV cameras, Fixed Line, PTCL TV, and office networking.',
+      ctaPrimary: 'Book Site Visit',
+      ctaSecondary: 'PTCL Packages & Offers',
+      location: 'Mingora, Swat, KP',
+      imageTag: 'Faizullah Khan · Networking Engineer',
+      imageTitle: 'Connect · Configure · Secure',
+      ptclHighlights: ['PTCL FTTH', 'Broadband Internet', 'Fixed Line', 'PTCL TV'],
+      metrics: [
+        { value: 'FTTH', label: 'PTCL Fiber & Broadband Support' },
+        { value: 'Wi-Fi', label: 'Routers, Mesh & Long-Range PtP' },
+        { value: 'CCTV', label: 'IP / HD Cameras & Mobile View' },
+        { value: '24/7', label: 'Fast Local Support in Swat' },
+      ],
+    },
+    ptclOffers: {
+      kicker: 'PTCL Packages, Tariffs & Bundles',
+      title: 'PTCL Services & Special Offers',
+      description:
+        'Compare PTCL Flash Fiber (FTTH), Broadband DSL unlimited tiers, SHOQ Smart TV, Fixed Line, and promotional double-speed bundles—with local exchange check & installation in Mingora, Swat.',
+      helplineLabel: 'PTCL Official Helpline',
+      localDeskLabel: 'Swat Connection & ONT Setup',
+      disclaimer:
+        'Monthly prices are approx. standard PTCL PKR tariffs; government taxes, Fair Usage Policy (FUP), and local exchange fiber availability apply.',
+      perMonth: '/ mo',
+      ctaWhatsapp: 'WhatsApp',
+      ctaBook: 'Book Setup',
+      swipeHint: 'Swipe cards to view all',
+      tabs: [
+        { id: 'fiber', label: 'Flash Fiber (FTTH)', shortLabel: 'Flash Fiber' },
+        { id: 'broadband', label: 'Broadband DSL', shortLabel: 'Broadband' },
+        { id: 'tvLine', label: 'SHOQ TV & Fixed Line', shortLabel: 'TV & Line' },
+        { id: 'promos', label: 'Special Offers', shortLabel: 'Offers' },
+      ],
+      fiber: {
+        summaryTitle: 'PTCL Flash Fiber — Pure Fiber-to-the-Home (GPON)',
+        summaryDesc:
+          'Direct optical fiber into your home or office for ultra-low latency gaming, 4K streaming, and stable multi-device Wi-Fi. One-time installation fee is approx. PKR 5,000 (periodically discounted during PTCL campaigns).',
+        plans: [
+          {
+            speed: '20 Mbps',
+            price: 'PKR 2,899',
+            tag: 'Starter FTTH',
+            useCase: '1–3 users · HD streaming & daily browsing',
+            features: ['Unlimited downloads (FUP)', 'GPON Fiber ONT Router support', 'Low-latency optical line'],
+          },
+          {
+            speed: '30 Mbps',
+            price: 'PKR 3,499',
+            tag: 'Popular Home',
+            featured: true,
+            useCase: 'Small families · Online classes & OTT TV',
+            features: ['Unlimited downloads (FUP)', 'Smooth 1080p/4K & video calls', 'Dual-band Wi-Fi ready'],
+          },
+          {
+            speed: '40 Mbps',
+            price: 'PKR 4,999',
+            tag: 'Family & WFH',
+            useCase: 'Multi-room Wi-Fi & remote work',
+            features: ['Unlimited downloads (FUP)', 'Ideal for Smart TV + mobiles', 'Eligible for 3-mo promos'],
+          },
+          {
+            speed: '50 Mbps',
+            price: 'PKR 5,999',
+            tag: 'High Speed',
+            useCase: 'Heavy streaming, CCTV cloud & offices',
+            features: ['Unlimited downloads (FUP)', 'Zero-lag cloud backups', 'Reliable multi-user throughput'],
+          },
+          {
+            speed: '100 Mbps',
+            price: 'PKR 9,449',
+            tag: 'Power User',
+            useCase: '4K streaming, gaming & commercial shops',
+            features: ['Unlimited downloads (FUP)', 'Ultra-low ping & rapid uploads', 'Full Wi-Fi 6 & LAN support'],
+          },
+          {
+            speed: '300 Mbps',
+            price: 'PKR 25,999',
+            tag: 'Enterprise FTTH',
+            useCase: 'Hotels, plazas, institutes & heavy offices',
+            features: ['Unlimited downloads (FUP)', 'Maximum residential/office fiber', 'Priority bandwidth capacity'],
+          },
+        ],
+      },
+      broadband: {
+        summaryTitle: 'PTCL Broadband DSL — Unlimited Internet & Voice Tiers',
+        summaryDesc:
+          'Reliable copper & VDSL broadband across PTCL exchanges with unlimited monthly volume (subject to FUP) and bundled SHOQ TV / Fixed Line minutes on select packages. High-speed 50–100 Mbps plans also available (~PKR 6,299–10,999).',
+        plans: [
+          {
+            speed: 'Up to 8 Mbps',
+            price: 'PKR 2,289',
+            tag: 'Economy Tier',
+            useCase: 'Basic browsing, WhatsApp & study',
+            features: ['Unlimited data volume (FUP)', 'Standard ADSL/VDSL modem setup', 'Optional landline voice add-on'],
+          },
+          {
+            speed: 'Up to 10 Mbps',
+            price: 'PKR 2,999',
+            tag: 'Entertainment Pack',
+            featured: true,
+            useCase: 'Home internet + Free SHOQ TV & App',
+            features: ['Free SHOQ TV & Mobile App', '100 All-Net Fixed Line minutes', 'Unlimited downloads (FUP)'],
+          },
+          {
+            speed: 'Up to 15 Mbps',
+            price: 'PKR 2,819',
+            tag: 'Mid-Tier DSL',
+            useCase: 'Balanced household speed',
+            features: ['Unlimited data volume (FUP)', 'Smooth HD YouTube & Zoom', 'Fast line diagnostics in Swat'],
+          },
+          {
+            speed: 'Up to 20 Mbps',
+            price: 'PKR 3,299',
+            tag: 'Family Value',
+            featured: true,
+            useCase: 'Streaming + 300 All-Net call mins',
+            features: ['Free SHOQ TV & Mobile App', '300 All-Net call minutes', 'Unlimited data volume (FUP)'],
+          },
+          {
+            speed: 'Up to 25 Mbps',
+            price: 'PKR 3,379',
+            tag: 'VDSL Speed',
+            useCase: 'Larger homes & small offices',
+            features: ['High-capacity VDSL connection', 'Multiple phones & Smart TVs', 'Clean indoor splitter cabling'],
+          },
+          {
+            speed: 'Up to 30 Mbps',
+            price: 'PKR 3,999',
+            tag: 'Pro Broadband',
+            useCase: 'Heavy household & POS shops',
+            features: ['Unlimited downloads (FUP)', 'Supports 50–100 Mbps upgrades', 'Full Wi-Fi coverage tuning'],
+          },
+        ],
+      },
+      tvLine: {
+        summaryTitle: 'SHOQ Smart TV, App & PTCL Fixed Line Services',
+        summaryDesc:
+          'Turn any television into an Android Smart TV with 200+ live channels, rewind control, and 15,000+ hours on-demand, paired with crystal-clear PTCL Fixed Line voice service.',
+        items: [
+          {
+            title: 'SHOQ Android TV Box (IPTV)',
+            price: 'PKR 7,999 upfront · or ~PKR 400/mo × 30 mos',
+            subtitle: 'Turns any HDMI TV into a Smart Android Entertainment Hub',
+            features: [
+              '200+ Live TV channels in HD quality',
+              'Play, Pause & Rewind Live TV anytime',
+              '15,000+ hours On-Demand movies, dramas & kids shows',
+              'Voice Remote, Built-in Chromecast & Google Play Store (YouTube, Netflix)',
+            ],
+          },
+          {
+            title: 'SHOQ App (Mobile, Tablet & Web)',
+            price: '~PKR 300 / mo · Free on select 10 Mbps+ bundles',
+            subtitle: 'Stream live TV, sports & Pakistani dramas anywhere on Android, iOS & browsers',
+            features: [
+              'Live news, sports, entertainment & kids channels',
+              'Ad-free binge watching across mobile & tablet',
+              'Included complimentary on eligible 10 Mbps & 20 Mbps packages',
+              'Quick activation via UPTCL / PTCL account',
+            ],
+          },
+          {
+            title: 'PTCL Fixed Line (Landline Voice)',
+            price: 'Multi-Play Bundle Savings · 100–300 All-Net Mins',
+            subtitle: 'Dependable voice service for homes, clinics, hotels & plazas',
+            features: [
+              'Clear voice connectivity across urban & rural exchanges',
+              '100 to 300 All-Net minutes bundled on select internet plans',
+              'Clean concealed telephone & splitter wiring by Faizullah Khan',
+              'Discounted combined monthly billing with Flash Fiber or DSL',
+            ],
+          },
+        ],
+      },
+      promos: {
+        summaryTitle: 'PTCL Special Offers, Double Speed & Seasonal Bundles',
+        summaryDesc:
+          'Take advantage of limited-time advance payment speed boosts, seasonal hybrid bundles, and hassle-free local feasibility checks in Mingora & Swat.',
+        items: [
+          {
+            title: 'Double Speed Advance Payment Promo',
+            highlight: '2× Speed Boost (3-Month Upfront)',
+            desc: 'Pay 3 months upfront on eligible Flash Fiber plans to unlock double speed boosts—such as 30 Mbps boosted to 60 Mbps or 40 Mbps boosted to 80 Mbps during active campaign periods.',
+            points: [
+              'Applies to eligible Flash Fiber tiers (availability per exchange)',
+              'Ideal for families & shops needing extra bandwidth',
+              'Confirmed via UPTCL App, Helpline 1218 or local booking',
+            ],
+          },
+          {
+            title: 'Seasonal / Azaadi Hybrid 100 Mbps Bundles',
+            highlight: 'From ~PKR 4,999 incl. taxes* (Campaign)',
+            desc: 'Periodic PTCL seasonal campaigns offer high-speed 100 Mbps hybrid bundles in eligible exchanges, often bundling a Free Smart/SHOQ TV Box and cellular minutes.',
+            points: [
+              'Limited-time regional promotional availability',
+              'Includes Smart TV Box or OTT benefits on qualifying plans',
+              'Ask Faizullah Khan to check active Swat exchange promos',
+            ],
+          },
+          {
+            title: 'Swat Feasibility Check & Clean Fiber Installation',
+            highlight: 'Local Support · 0342-1229495',
+            desc: 'Avoid messy outdoor wiring or weak router placement. Faizullah Khan verifies PTCL FTTH / DSL availability at your street in Mingora & Swat and optimizes your ONT + Wi-Fi mesh.',
+            points: [
+              'Same-day site survey & exchange feasibility guidance',
+              'Optical fiber drop routing, Cat6 LAN & multi-floor Wi-Fi',
+              'UPTCL App, SHOQ TV Box & landline troubleshooting',
+            ],
+          },
+        ],
+      },
+    },
+    hardware3d: {
+      kicker: 'Interactive 3D Equipment Studio',
+      title: 'Inspect Wi-Fi, CCTV & Fiber Hardware in Real-Time 3D',
+      hint: 'Drag or swipe to rotate 360°, pinch or scroll to zoom, and tap Explode 3D to inspect internal components.',
+      inspectorBadge: 'Interactive 3D Hardware Inspector',
+      showControls: 'Show 3D Controls',
+      hideControls: 'Hide Controls',
+      explode: 'Explode 3D',
+      assemble: 'Assemble',
+      models: {
+        router: {
+          label: 'Wi-Fi Router',
+          title: 'Dual-Band Wi-Fi 6 Enterprise Router',
+          subtitle: '4 High-Gain Antennas · Gigabit WAN/LAN Ports · Heat-Sink Chassis',
+          specs: 'AX3000 Dual-Band · Beamforming · 4×4 MIMO',
+        },
+        cctv: {
+          label: 'CCTV Cam',
+          title: 'Weatherproof IP Night-Vision Camera',
+          subtitle: 'Optical Glass Lens · IR Night Array · Articulated PoE Mount',
+          specs: '4K Optical Sensor · IP67 Housing · PoE 802.3af',
+        },
+        switch: {
+          label: 'Fiber Switch',
+          title: 'Managed 10G SFP+ Fiber Core Switch',
+          subtitle: '8× Gigabit RJ45 Ports · 2× 10G SFP+ Optical Uplinks · 1U Rack Chassis',
+          specs: '20 Gbps Uplinks · VLAN & QoS · Rackmount 1U',
+        },
+      },
+      presets: {
+        iso: 'ISO',
+        front: 'FRONT',
+        top: 'TOP',
+      },
+    },
+  topology: {
+      sectionKicker: 'Animated System Blueprint',
+      sectionTitle: 'How Your Cameras, Wi-Fi & Office Network Work Together',
+      sectionDesc:
+        'Switch between CCTV Surveillance, Wi-Fi Setup, and LAN Networking below to inspect how Faizullah Khan wires and connects every device cleanly.',
+      badge: 'Interactive System Architecture',
+      flowLabel: 'System Flow',
+      nodes: {
+        isp: 'ISP / Fiber',
+        router: 'Main Router',
+        poe: 'PoE Switch',
+        wifi: 'Wi-Fi / PtP',
+        cctv: 'CCTV & NVR',
+        mobile: 'Mobile View',
+        lan: 'LAN / Racks',
+      },
+      modes: {
+        cctv: {
+          tab: 'CCTV Cameras & NVR',
+          title: 'Complete IP & HD CCTV Surveillance Architecture',
+          summary:
+            'Indoor dome and outdoor weatherproof night-vision cameras wired neatly into a PoE switch and NVR/DVR recorder—with live viewing configured right on your mobile phone.',
+          specs: [
+            { label: 'Camera Quality', value: '2MP – 8MP Night Color' },
+            { label: 'Recording Storage', value: '30+ Days Continuous' },
+            { label: 'Remote Access', value: 'Live Mobile App View' },
+          ],
+          activeRoute: 'IP & HD Cameras → PoE Switch → NVR / DVR Storage → Router & Phone View',
+        },
+        wifi: {
+          tab: 'Wi-Fi & Internet Setup',
+          title: 'Full-Coverage Home, Shop & Hotel Wi-Fi System',
+          summary:
+            'Fiber/DSL modem setup, dual-band Wi-Fi routers, multi-floor ceiling mesh access points, and outdoor point-to-point wireless links with zero dead zones.',
+          specs: [
+            { label: 'Coverage Mode', value: 'Dual-Band Mesh Wi-Fi' },
+            { label: 'Long-Range Link', value: 'Up to 15 km PtP' },
+            { label: 'Speed Control', value: 'MikroTik Bandwidth Limit' },
+          ],
+          activeRoute: 'Fiber / ISP Line → Main Router → PoE Switch → Ceiling Wi-Fi & PtP Dish',
+        },
+        networking: {
+          tab: 'LAN & Fiber Networking',
+          title: 'Structured Cabling, Switches & Complete Office Setup',
+          summary:
+            'End-to-end Cat6 Ethernet cabling, fiber splicing, patch panel dressing, MikroTik/Cisco router configuration, and reliable troubleshooting for offices, plazas, and schools.',
+          specs: [
+            { label: 'Cabling Standard', value: 'Cat6 / Cat6A & Fiber' },
+            { label: 'Core Switching', value: '1 Gbps – 10 Gbps' },
+            { label: 'Rack Management', value: 'Labeled Patch & UPS' },
+          ],
+          activeRoute: 'ISP Uplink → Core Router → Managed Switch → Office PCs, Printers & Racks',
+        },
+      },
+    },
+    services: {
+      kicker: 'Technician Services',
+      title: 'Wi-Fi, CCTV Cameras & Complete Networking in Swat',
+      cta: 'Book Service Visit',
+      cards: [
+        {
+          index: '01. CCTV Security Cameras',
+          title: 'IP & HD CCTV Camera Installation + Mobile Live View',
+          desc: 'Indoor dome and outdoor waterproof night-vision cameras for homes, shops, plazas, and offices—complete with DVR/NVR storage, tidy PVC conduit wiring, and live viewing on your smartphone.',
+          footer: 'Hikvision / Dahua · Night Color · Mobile App Setup',
+        },
+        {
+          index: '02. Wi-Fi & Wireless Links',
+          title: 'Full-Building Wi-Fi, Mesh & Point-to-Point Links',
+          desc: 'High-speed routers, multi-floor Wi-Fi extenders, hotel guest hotspots, and outdoor Ubiquiti/MikroTik wireless bridges across Swat.',
+        },
+        {
+          index: '03. Fiber & LAN Cabling',
+          title: 'Structured Cabling, Fiber & Core Switches',
+          desc: 'Cat6/Cat6A office cabling, fiber splicing, server rack dressing, and managed switches built for fast, reliable office connectivity.',
+        },
+        {
+          index: '04. Complete Technical Support & Repair',
+          title: 'Router Configuration, Cable Testing & Fault Repair',
+          desc: 'Slow Wi-Fi, camera offline errors, broken RJ45 connectors, or MikroTik dual-WAN setup—Faizullah Khan diagnoses and fixes all networking, camera, and internet issues on site.',
+          bullets: [
+            'Cable fault tracing, RJ45 crimping & patch testing',
+            'DVR/NVR hard drive replacement & phone app recovery',
+            'Intercom, biometric attendance & PoE switch setup',
+          ],
+        },
+      ],
+    },
+    about: {
+      kicker: 'Trusted Local Technician · Mingora, Swat',
+      title: 'Faizullah Khan — One Dependable Technician for Wi-Fi, Cameras & Networking',
+      bio: 'From small home Wi-Fi and 4-camera shop setups to full commercial plaza cabling and MikroTik routing across Mingora and Swat, every job is done cleanly with neat wiring, proper waterproofing, and reliable after-service support.',
+      recentHeading: 'Recent Work Across Mingora & Swat',
+      proofs: [
+        {
+          title: 'Complete Plaza CCTV & Intercom Network — Mingora',
+          metric: '48 IP Cameras · Mobile App Live View',
+          detail:
+            'Installed outdoor weatherproof night-vision cameras, tidy conduit wiring, PoE switches, and 30-day NVR recording accessible from anywhere.',
+        },
+        {
+          title: 'Multi-Floor Wi-Fi & Internet Setup — Swat Valley',
+          metric: '32 Access Points · Zero Dead Zones',
+          detail:
+            'Configured dual-band ceiling Wi-Fi, MikroTik speed control, and dual-ISP backup so guests and staff stay online without drops.',
+        },
+        {
+          title: 'Office LAN Cabling, Fiber & Rack Assembly',
+          metric: '60+ Tested Points · Clean Server Rack',
+          detail:
+            'Pulled Cat6 cabling, spliced fiber uplinks, crimped RJ45 patch panels, and resolved slow-network bottlenecks across departments.',
+        },
+      ],
+    },
+    contact: {
+      kicker: 'Direct Technician Booking',
+      title: 'Call or WhatsApp Faizullah Khan in Mingora & Swat',
+      desc: 'Need CCTV cameras installed, Wi-Fi coverage fixed, or full office networking setup? Call directly on 0342-1229495 or send your work details straight to WhatsApp below.',
+      phoneLabel: 'Direct Phone & WhatsApp',
+      areaLabel: 'Service Area',
+      areaValue: 'Mingora, Swat, Khyber Pakhtunkhwa, Pakistan',
+      form: {
+        nameLabel: 'Your Name',
+        namePlaceholder: 'e.g. Tariq Mahmood',
+        nameError: 'Please enter your name.',
+        phoneLabel: 'Phone / WhatsApp Number',
+        phonePlaceholder: '03XX-XXXXXXX',
+        phoneError: 'Please enter a valid phone number (e.g. 0342-1229495).',
+        locationLabel: 'Site Location',
+        locationPlaceholder: 'Mingora, Saidu Sharif, Matta...',
+        locationError: 'Please specify your area in Mingora or Swat.',
+        serviceLabel: 'Work Needed',
+        services: [
+          'CCTV Security Camera Installation',
+          'Wi-Fi Router & Coverage Setup',
+          'LAN Cabling & Fiber Networking',
+          'Router Config & Fault Troubleshooting',
+          'Complete Home / Shop / Office Setup',
+        ],
+        detailsLabel: 'Work Details (Optional)',
+        detailsPlaceholder: 'Number of cameras, Wi-Fi floors, cables, or fault to fix...',
+        submitBtn: 'Send on WhatsApp',
+        orCall: 'Or call directly:',
+        successTitle: 'Ready to Send on WhatsApp',
+        successDesc1: 'Thank you,',
+        successDesc2: '. Your service details are ready for WhatsApp on',
+        successDesc3: '— if WhatsApp did not open automatically, tap the button below.',
+        sendWhatsapp: 'Open WhatsApp & Send',
+        editBtn: 'Send Another Request',
+      },
+    },
+    footer: {
+      roleLine: 'Wi-Fi, CCTV & Networking Technician · Mingora, Swat',
+      links: {
+        ptclOffers: 'PTCL Offers',
+        hardware: '3D Hardware',
+        workflow: 'Workflow',
+        services: 'Services',
+        contact: 'Contact',
+      },
+    },
+  },
+  ur: {
+    brand: 'فیض اللہ خان',
+    nav: {
+      ptclOffers: 'پی ٹی سی ایل آفرز',
+      hardware3d: 'تھری ڈی ہارڈویئر',
+      services: 'خدمات',
+      about: 'تعارف',
+      bookBtn: 'ٹیکنیشن بک کریں',
+      mobilePtclOffers: 'پی ٹی سی ایل سروسز اور آفرز',
+      mobileHardware3d: 'تھری ڈی ہارڈویئر انسپکٹر',
+      mobileServices: 'وائی فائی، کیمرے اور نیٹ ورکنگ',
+      mobileAbout: 'ٹیکنیشن کا تعارف',
+    },
+    controls: {
+      languageLabel: 'زبان',
+      themeLabel: 'موڈ',
+      light: 'لائٹ',
+      dark: 'ڈارک',
+      english: 'English',
+      englishShort: 'EN',
+      urdu: 'اردو',
+      toggleTheme: 'لائٹ یا ڈارک موڈ تبدیل کریں',
+      mobileCall: 'کال کریں',
+      mobileWhatsapp: 'واٹس ایپ',
+      mobileBook: 'وزٹ بک',
+    },
+    hero: {
+      kicker: 'پی ٹی سی ایل فائبر · وائی فائی، سی سی ٹی وی اور نیٹ ورکنگ انجینئر · مینگورہ، سوات',
+      title: 'پی ٹی سی ایل فائبر، وائی فائی، کیمرے اور نیٹ ورک انجینئرنگ',
+      description:
+        'فیض اللہ خان مینگورہ اور سوات بھر میں پی ٹی سی ایل FTTH فائبر، براڈبینڈ انٹرنیٹ، وائی فائی، نائٹ ویژن سی سی ٹی وی کیمرے، فکسڈ لائن، PTCL TV اور آفس نیٹ ورکنگ کی مکمل خدمات فراہم کرتے ہیں۔',
+      ctaPrimary: 'وزٹ بک کریں',
+      ctaSecondary: 'پی ٹی سی ایل پیکجز اور آفرز',
+      location: 'مینگورہ، سوات، خیبر پختونخوا',
+      imageTag: 'فیض اللہ خان · نیٹ ورکنگ انجینئر',
+      imageTitle: 'کنیکٹ · کنفیگر · سیکیور',
+      ptclHighlights: ['PTCL FTTH', 'براڈبینڈ انٹرنیٹ', 'فکسڈ لائن', 'PTCL TV'],
+      metrics: [
+        { value: 'FTTH', label: 'پی ٹی سی ایل فائبر اور براڈبینڈ سپورٹ' },
+        { value: 'Wi-Fi', label: 'راؤٹرز، میش اور لانگ رینج لنکس' },
+        { value: 'CCTV', label: 'آئی پی / ایچ ڈی کیمرے اور موبائل ویو' },
+        { value: '24/7', label: 'سوات میں فوری مقامی سپورٹ' },
+      ],
+    },
+    ptclOffers: {
+      kicker: 'پی ٹی سی ایل پیکجز، ریٹس اور بنڈلز',
+      title: 'پی ٹی سی ایل سروسز اور خصوصی آفرز',
+      description:
+        'پی ٹی سی ایل فلیش فائبر (FTTH)، براڈبینڈ ڈی ایس ایل، SHOQ اسمارٹ ٹی وی، فکسڈ لائن اور ڈبل اسپیڈ پرومو آفرز دیکھیں—مینگورہ اور سوات میں مقامی ایکسچینج چیک اور تنصیب کے ساتھ۔',
+      helplineLabel: 'پی ٹی سی ایل آفیشل ہیلپ لائن',
+      localDeskLabel: 'سوات کنکشن اور ONT سیٹ اپ',
+      disclaimer:
+        'ماہانہ قیمتیں اندازاً معیاری پی ٹی سی ایل ٹیرف ہیں؛ حکومتی ٹیکس، فیئر یوزیج پالیسی (FUP) اور علاقائی ایکسچینج دستیابی لاگو ہوتی ہے۔',
+      perMonth: '/ ماہ',
+      ctaWhatsapp: 'واٹس ایپ',
+      ctaBook: 'سیٹ اپ بک کریں',
+      swipeHint: 'مزید پیکجز کے لیے سوائپ کریں',
+      tabs: [
+        { id: 'fiber', label: 'فلیش فائبر (FTTH)', shortLabel: 'فلیش فائبر' },
+        { id: 'broadband', label: 'براڈبینڈ DSL', shortLabel: 'براڈبینڈ' },
+        { id: 'tvLine', label: 'SHOQ TV اور فکسڈ لائن', shortLabel: 'ٹی وی / لائن' },
+        { id: 'promos', label: 'خصوصی آفرز', shortLabel: 'آفرز' },
+      ],
+      fiber: {
+        summaryTitle: 'پی ٹی سی ایل فلیش فائبر — خالص فائبر ٹو دی ہوم (GPON)',
+        summaryDesc:
+          'گھر یا دفتر تک براہ راست آپٹیکل فائبر، انتہائی کم پنگ گیمنگ، 4K اسٹریمنگ اور مستحکم وائی فائی کے لیے۔ ون ٹائم انسٹالیشن فیس اندازاً PKR 5,000 ہے (پرومو مہم کے دوران رعایت دستیاب ہوتی ہے)۔',
+        plans: [
+          {
+            speed: '20 Mbps',
+            price: 'PKR 2,899',
+            tag: 'اسٹارٹر FTTH',
+            useCase: '1–3 صارفین · ایچ ڈی ویڈیوز اور روزانہ استعمال',
+            features: ['لامحدود ڈاؤن لوڈز (FUP)', 'GPON فائبر ONT راؤٹر سپورٹ', 'کم پنگ آپٹیکل فائبر لائن'],
+          },
+          {
+            speed: '30 Mbps',
+            price: 'PKR 3,499',
+            tag: 'مقبول گھریلو پیکج',
+            featured: true,
+            useCase: 'چھوٹا خاندان · آن لائن کلاسز اور اسٹریمنگ',
+            features: ['لامحدود ڈاؤن لوڈز (FUP)', 'بغیر رکاوٹ 1080p/4K اور ویڈیو کالز', 'ڈوئل بینڈ وائی فائی کے لیے بہترین'],
+          },
+          {
+            speed: '40 Mbps',
+            price: 'PKR 4,999',
+            tag: 'فیملی اور ورک فرام ہوم',
+            useCase: 'کئی کمروں کا وائی فائی اور آفس کام',
+            features: ['لامحدود ڈاؤن لوڈز (FUP)', 'اسمارٹ ٹی وی اور موبائلز کے لیے موزوں', '3 ماہ ایڈوانس آفر کے اہل'],
+          },
+          {
+            speed: '50 Mbps',
+            price: 'PKR 5,999',
+            tag: 'ہائی اسپیڈ',
+            useCase: 'بھاری اسٹریمنگ، کیمرہ کلاؤڈ اور دفاتر',
+            features: ['لامحدود ڈاؤن لوڈز (FUP)', 'تیز بیک اپ اور اپ لوڈز', 'کئی صارفین کے لیے پائیدار رفتار'],
+          },
+          {
+            speed: '100 Mbps',
+            price: 'PKR 9,449',
+            tag: 'پاور یوزر',
+            useCase: '4K اسٹریمنگ، گیمنگ اور کمرشل دکانیں',
+            features: ['لامحدود ڈاؤن لوڈز (FUP)', 'الٹرا لو پنگ اور تیز اپ لوڈ', 'مکمل Wi-Fi 6 اور LAN سپورٹ'],
+          },
+          {
+            speed: '300 Mbps',
+            price: 'PKR 25,999',
+            tag: 'انٹرپرائز FTTH',
+            useCase: 'ہوٹل، پلازے، تعلیمی ادارے اور بڑے دفاتر',
+            features: ['لامحدود ڈاؤن لوڈز (FUP)', 'زیادہ سے زیادہ گھریلو و دفتری فائبر', 'اعلیٰ بینڈوتھ گنجائش'],
+          },
+        ],
+      },
+      broadband: {
+        summaryTitle: 'پی ٹی سی ایل براڈبینڈ DSL — لامحدود انٹرنیٹ اور وائس پیکجز',
+        summaryDesc:
+          'پی ٹی سی ایل ایکسچینجز پر قابل اعتماد کاپر اور VDSL براڈبینڈ، لامحدود ماہانہ والیوم (FUP کے تحت) اور منتخب پیکجز پر مفت SHOQ TV / آل نیٹ منٹس کے ساتھ۔ 50–100 Mbps پلانز بھی (~PKR 6,299–10,999) دستیاب ہیں۔',
+        plans: [
+          {
+            speed: 'Up to 8 Mbps',
+            price: 'PKR 2,289',
+            tag: 'اکنامی پیکج',
+            useCase: 'بنیادی براؤزنگ، واٹس ایپ اور پڑھائی',
+            features: ['لامحدود ڈیٹا والیوم (FUP)', 'معیاری ADSL/VDSL موڈیم سیٹ اپ', 'فکسڈ لائن وائس کی سہولت'],
+          },
+          {
+            speed: 'Up to 10 Mbps',
+            price: 'PKR 2,999',
+            tag: 'انٹرٹینمنٹ پیک',
+            featured: true,
+            useCase: 'گھریلو انٹرنیٹ + مفت SHOQ TV اور ایپ',
+            features: ['مفت SHOQ TV اور موبائل ایپ', '100 آل نیٹ فکسڈ لائن منٹس', 'لامحدود ڈاؤن لوڈز (FUP)'],
+          },
+          {
+            speed: 'Up to 15 Mbps',
+            price: 'PKR 2,819',
+            tag: 'مڈ ٹیر DSL',
+            useCase: 'متوازن گھریلو اسپیڈ',
+            features: ['لامحدود ڈیٹا والیوم (FUP)', 'ہموار ایچ ڈی یوٹیوب اور زوم', 'سوات میں فوری لائن ٹیسٹنگ'],
+          },
+          {
+            speed: 'Up to 20 Mbps',
+            price: 'PKR 3,299',
+            tag: 'فیملی ویلیو',
+            featured: true,
+            useCase: 'اسٹریمنگ + 300 آل نیٹ کال منٹس',
+            features: ['مفت SHOQ TV اور موبائل ایپ', '300 آل نیٹ کال منٹس', 'لامحدود ڈیٹا والیوم (FUP)'],
+          },
+          {
+            speed: 'Up to 25 Mbps',
+            price: 'PKR 3,379',
+            tag: 'VDSL اسپیڈ',
+            useCase: 'بڑے گھر اور چھوٹے دفاتر',
+            features: ['ہائی کیپیسٹی VDSL کنکشن', 'متعدد موبائلز اور اسمارٹ ٹی وی', 'صاف انڈور اسپلٹر وائرنگ'],
+          },
+          {
+            speed: 'Up to 30 Mbps',
+            price: 'PKR 3,999',
+            tag: 'پرو براڈبینڈ',
+            useCase: 'زیادہ استعمال اور کاروباری دکانیں',
+            features: ['لامحدود ڈاؤن لوڈز (FUP)', '50–100 Mbps اپ گریڈ کی سہولت', 'مکمل وائی فائی کوریج ٹیوننگ'],
+          },
+        ],
+      },
+      tvLine: {
+        summaryTitle: 'SHOQ اسمارٹ ٹی وی، ایپ اور پی ٹی سی ایل فکسڈ لائن سروسز',
+        summaryDesc:
+          '200 سے زائد لائیو چینلز، ریوائنڈ کنٹرول اور 15,000+ گھنٹے آن ڈیمانڈ ویڈیوز کے ساتھ کسی بھی ٹی وی کو اینڈرائیڈ اسمارٹ ٹی وی بنائیں، اور صاف پی ٹی سی ایل لینڈ لائن حاصل کریں۔',
+        items: [
+          {
+            title: 'SHOQ اینڈرائیڈ ٹی وی باکس (IPTV)',
+            price: 'PKR 7,999 یکمشت · یا ~PKR 400/ماہ × 30 ماہ',
+            subtitle: 'کسی بھی HDMI ٹی وی کو جدید اسمارٹ اینڈرائیڈ تفریحی مرکز بنائیں',
+            features: [
+              '200+ لائیو ایچ ڈی ٹی وی چینلز',
+              'لائیو ٹی وی پلے، پاز اور ریوائنڈ فیچر',
+              '15,000+ گھنٹے آن ڈیمانڈ فلمیں، ڈرامے اور بچوں کے پروگرام',
+              'وائس ریموٹ، کروم کاسٹ اور گوگل پلے اسٹور (یوٹیوب، نیٹ فلکس)',
+            ],
+          },
+          {
+            title: 'SHOQ ایپ (موبائل، ٹیبلیٹ اور ویب)',
+            price: '~PKR 300 / ماہ · منتخب 10 Mbps+ پیکجز پر مفت',
+            subtitle: 'اینڈرائیڈ، آئی فون اور ویب پر کہیں بھی لائیو ٹی وی، اسپورٹس اور ڈرامے دیکھیں',
+            features: [
+              'لائیو نیوز، اسپورٹس، انٹرٹینمنٹ اور کڈز چینلز',
+              'موبائل اور ٹیبلیٹ پر بغیر اشتہارات اسٹریمنگ',
+              'اہل 10 Mbps اور 20 Mbps پیکجز پر مفت شامل',
+              'UPTCL / PTCL اکاؤنٹ کے ذریعے فوری ایکٹیویشن',
+            ],
+          },
+          {
+            title: 'پی ٹی سی ایل فکسڈ لائن (لینڈ لائن وائس)',
+            price: 'ملٹی پلے بنڈل بچت · 100–300 آل نیٹ منٹس',
+            subtitle: 'گھروں، کلینکس، ہوٹلوں اور پلازوں کے لیے مستحکم لینڈ لائن سروس',
+            features: [
+              'شہری اور دیہی ایکسچینجز میں صاف آواز',
+              'منتخب انٹرنیٹ پیکجز میں 100 سے 300 آل نیٹ منٹس شامل',
+              'فیض اللہ خان کی جانب سے صاف ٹیلیفون اور اسپلٹر وائرنگ',
+              'فلیش فائبر یا DSL کے ساتھ مشترکہ بلنگ پر رعایت',
+            ],
+          },
+        ],
+      },
+      promos: {
+        summaryTitle: 'پی ٹی سی ایل خصوصی آفرز، ڈبل اسپیڈ اور سیزنل بنڈلز',
+        summaryDesc:
+          'محدود مدت کی ایڈوانس پیمنٹ ڈبل اسپیڈ آفرز، سیزنل ہائبرڈ بنڈلز اور مینگورہ و سوات میں فوری ایکسچینج دستیابی چیک سے فائدہ اٹھائیں۔',
+        items: [
+          {
+            title: 'ڈبل اسپیڈ ایڈوانس پیمنٹ پرومو',
+            highlight: '2× اسپیڈ بوسٹ (3 ماہ ایڈوانس)',
+            desc: 'اہل فلیش فائبر پلانز پر 3 ماہ کی پیشگی ادائیگی کریں اور ڈبل اسپیڈ حاصل کریں—جیسے مہم کے دوران 30 Mbps سے 60 Mbps یا 40 Mbps سے 80 Mbps تک اپ گریڈ۔',
+            points: [
+              'اہل فلیش فائبر پلانز اور متعلقہ ایکسچینجز پر لاگو',
+              'اضافی اسپیڈ کے خواہشمند گھروں اور دکانوں کے لیے بہترین',
+              'UPTCL ایپ، ہیلپ لائن 1218 یا مقامی بکنگ سے تصدیق کریں',
+            ],
+          },
+          {
+            title: 'سیزنل / آزادی ہائبرڈ 100 Mbps بنڈلز',
+            highlight: '~PKR 4,999 بمعہ ٹیکس* (پرومو)',
+            desc: 'وقتی پی ٹی سی ایل سیزنل مہمات میں منتخب ایکسچینجز پر 100 Mbps ہائبرڈ بنڈلز دیے جاتے ہیں جن میں مفت اسمارٹ/SHOQ ٹی وی باکس اور کال منٹس شامل ہوتے ہیں۔',
+            points: [
+              'محدود مدت اور علاقائی دستیابی پر مبنی آفر',
+              'مستحق پلانز پر اسمارٹ ٹی وی باکس یا OTT فوائد',
+              'سوات ایکسچینج کی موجودہ آفر جاننے کے لیے رابطہ کریں',
+            ],
+          },
+          {
+            title: 'سوات فزیبلٹی چیک اور صاف فائبر انسٹالیشن',
+            highlight: 'مقامی سپورٹ · 0342-1229495',
+            desc: 'بے ترتیب تاروں اور کمزور وائی فائی سگنل سے بچیں۔ فیض اللہ خان مینگورہ اور سوات میں آپ کی گلی میں FTTH / DSL کی دستیابی چیک کر کے مکمل ONT + وائی فائی سیٹ اپ کرتے ہیں۔',
+            points: [
+              'اسی دن سائٹ سروے اور ایکسچینج رہنمائی',
+              'آپٹیکل فائبر ڈراپ وائرنگ، Cat6 LAN اور ملٹی فلور وائی فائی',
+              'UPTCL ایپ، SHOQ TV باکس اور لینڈ لائن فالٹ کی مرمت',
+            ],
+          },
+        ],
+      },
+    },
+    hardware3d: {
+      kicker: 'انٹرایکٹو تھری ڈی ہارڈویئر اسٹوڈیو',
+      title: 'وائی فائی، سی سی ٹی وی اور فائبر آلات کا تھری ڈی میں جائزہ لیں',
+      hint: '360 ڈگری گھمانے کے لیے ڈریگ یا سوائپ کریں، زوم کریں اور اندرونی حصے دیکھنے کے لیے Explode 3D دبائیں۔',
+      inspectorBadge: 'تھری ڈی ہارڈویئر انسپکٹر',
+      showControls: 'کنٹرولز دکھائیں',
+      hideControls: 'کنٹرولز چھپائیں',
+      explode: 'تھری ڈی کھولیں',
+      assemble: 'جوڑیں',
+      models: {
+        router: {
+          label: 'وائی فائی راؤٹر',
+          title: 'ڈوئل بینڈ وائی فائی 6 انٹرپرائز راؤٹر',
+          subtitle: '4 ہائی گین اینٹینا · گیگابٹ پورٹس · ہیٹ سنک باڈی',
+          specs: 'AX3000 Dual-Band · Beamforming · 4×4 MIMO',
+        },
+        cctv: {
+          label: 'سی سی ٹی وی کیمرہ',
+          title: 'واٹر پروف آئی پی نائٹ ویژن کیمرہ',
+          subtitle: 'آپٹیکل گلاس لینس · نائٹ انفراریڈ ایل ای ڈی · مضبوط ماؤنٹ',
+          specs: '4K Optical Sensor · IP67 Housing · PoE 802.3af',
+        },
+        switch: {
+          label: 'فائبر سوئچ',
+          title: 'مینجڈ 10G SFP+ فائبر کور سوئچ',
+          subtitle: '8 گیگابٹ پورٹس · 2 فائبر آپٹک لنکس · 1U ریک باڈی',
+          specs: '20 Gbps Uplinks · VLAN & QoS · Rackmount 1U',
+        },
+      },
+      presets: {
+        iso: 'آئیسو',
+        front: 'سامنے',
+        top: 'اوپر',
+      },
+    },
+    topology: {
+      sectionKicker: 'اینیمیٹڈ سسٹم ڈیزائن',
+      sectionTitle: 'کیمرے، وائی فائی اور آفس نیٹ ورک ایک ساتھ کیسے کام کرتے ہیں',
+      sectionDesc:
+        'نیچے سی سی ٹی وی، وائی فائی اور لین نیٹ ورکنگ کے درمیان سوئچ کر کے دیکھیں کہ ہر ڈیوائس کس طرح صاف طریقے سے جڑتی ہے۔',
+      badge: 'انٹرایکٹو سسٹم آرکیٹیکچر',
+      flowLabel: 'سسٹم فلو',
+      nodes: {
+        isp: 'ISP / Fiber',
+        router: 'Main Router',
+        poe: 'PoE Switch',
+        wifi: 'Wi-Fi / PtP',
+        cctv: 'CCTV & NVR',
+        mobile: 'Mobile View',
+        lan: 'LAN / Racks',
+      },
+      modes: {
+        cctv: {
+          tab: 'سی سی ٹی وی اور این وی آر',
+          title: 'مکمل آئی پی اور ایچ ڈی سی سی ٹی وی سرویلنس سسٹم',
+          summary:
+            'انڈور ڈوم اور آؤٹ ڈور واٹر پروف نائٹ ویژن کیمرے PoE سوئچ اور NVR/DVR ریکارڈر کے ذریعے آپ کے موبائل فون پر لائیو ویو کے ساتھ منسلک۔',
+          specs: [
+            { label: 'کیمرہ کوالٹی', value: '2MP – 8MP Night Color' },
+            { label: 'ریکارڈنگ اسٹوریج', value: '30+ Days Continuous' },
+            { label: 'موبائل رسائی', value: 'Live Mobile App View' },
+          ],
+          activeRoute: 'IP & HD Cameras → PoE Switch → NVR / DVR Storage → Router & Phone View',
+        },
+        wifi: {
+          tab: 'وائی فائی اور انٹرنیٹ',
+          title: 'گھر، دکان اور ہوٹل کے لیے مکمل کوریج وائی فائی سسٹم',
+          summary:
+            'فائبر/ڈی ایس ایل موڈیم سیٹ اپ، ڈوئل بینڈ راؤٹرز، ملٹی فلور میش ایکسیس پوائنٹس اور آؤٹ ڈور وائرلیس لنکس بغیر کسی سگنل ڈراپ کے۔',
+          specs: [
+            { label: 'کوریج موڈ', value: 'Dual-Band Mesh Wi-Fi' },
+            { label: 'لانگ رینج لنک', value: 'Up to 15 km PtP' },
+            { label: 'اسپیڈ کنٹرول', value: 'MikroTik Bandwidth Limit' },
+          ],
+          activeRoute: 'Fiber / ISP Line → Main Router → PoE Switch → Ceiling Wi-Fi & PtP Dish',
+        },
+        networking: {
+          tab: 'لین اور فائبر نیٹ ورکنگ',
+          title: 'اسٹرکچرڈ کیبلنگ، سوئچز اور مکمل آفس سیٹ اپ',
+          summary:
+            'دفاتر، پلازوں اور اسکولوں کے لیے Cat6 کیبلنگ، فائبر اسپلائسنگ، پیچ پینل ڈریسنگ اور مائیکروٹک/سسکو راؤٹر کنفیگریشن۔',
+          specs: [
+            { label: 'کیبلنگ معیار', value: 'Cat6 / Cat6A & Fiber' },
+            { label: 'کور سوئچنگ', value: '1 Gbps – 10 Gbps' },
+            { label: 'ریک مینجمنٹ', value: 'Labeled Patch & UPS' },
+          ],
+          activeRoute: 'ISP Uplink → Core Router → Managed Switch → Office PCs, Printers & Racks',
+        },
+      },
+    },
+    services: {
+      kicker: 'ٹیکنیشن کی خدمات',
+      title: 'سوات میں وائی فائی، سی سی ٹی وی اور مکمل نیٹ ورکنگ',
+      cta: 'سروس وزٹ بک کریں',
+      cards: [
+        {
+          index: '01. سی سی ٹی وی سیکیورٹی کیمرے',
+          title: 'آئی پی اور ایچ ڈی کیمروں کی تنصیب + موبائل لائیو ویو',
+          desc: 'گھروں، دکانوں، پلازوں اور دفاتر کے لیے انڈور اور واٹر پروف نائٹ ویژن کیمرے، DVR/NVR ریکارڈنگ، پائپ وائرنگ اور موبائل ایپ سیٹ اپ۔',
+          footer: 'Hikvision / Dahua · Night Color · Mobile App Setup',
+        },
+        {
+          index: '02. وائی فائی اور وائرلیس لنکس',
+          title: 'پوری عمارت میں وائی فائی، میش اور پوائنٹ ٹو پوائنٹ لنکس',
+          desc: 'تیز رفتار راؤٹرز، ملٹی فلور وائی فائی، ہوٹل ہاٹ اسپاٹ اور سوات بھر میں لانگ رینج وائرلیس بریجز۔',
+        },
+        {
+          index: '03. فائبر اور لین کیبلنگ',
+          title: 'اسٹرکچرڈ کیبلنگ، فائبر اور کور سوئچز',
+          desc: 'دفاتر کے لیے Cat6/Cat6A کیبلنگ، فائبر جوائنٹنگ، سرور ریک سیٹ اپ اور تیز نیٹ ورکنگ۔',
+        },
+        {
+          index: '04. مکمل ٹیکنیکل سپورٹ اور مرمت',
+          title: 'راؤٹر سیٹنگ، کیبل ٹیسٹنگ اور فالٹ ریپیئر',
+          desc: 'سست وائی فائی، کیمرہ آف لائن مسئلہ، خراب کنیکٹر یا مائیکروٹک ڈوئل انٹرنیٹ سیٹ اپ—فیض اللہ خان موقع پر آ کر ہر خرابی درست کرتے ہیں۔',
+          bullets: [
+            'کیبل فالٹ چیکنگ، RJ45 پنچنگ اور پوائنٹ ٹیسٹنگ',
+            'DVR/NVR ہارڈ ڈرائیو تبدیلی اور موبائل ایپ ریکوری',
+            'انٹرکام، بائیومیٹرک حاضری مشین اور PoE سوئچ سیٹ اپ',
+          ],
+        },
+      ],
+    },
+    about: {
+      kicker: 'قابل اعتماد مقامی ٹیکنیشن · مینگورہ، سوات',
+      title: 'فیض اللہ خان — وائی فائی، کیمرے اور نیٹ ورکنگ کے لیے ایک مستند ماہر',
+      bio: 'گھر کے سادہ وائی فائی اور دکان کے 4 کیمروں سے لے کر پورے پلازے کی کیبلنگ اور مائیکروٹک راؤٹنگ تک، ہر کام صاف وائرنگ، مکمل واٹر پروفنگ اور بعد از سروس ضمانت کے ساتھ کیا جاتا ہے۔',
+      recentHeading: 'مینگورہ اور سوات میں حالیہ کام',
+      proofs: [
+        {
+          title: 'مکمل پلازہ سی سی ٹی وی اور انٹرکام نیٹ ورک — مینگورہ',
+          metric: '48 آئی پی کیمرے · موبائل لائیو ویو',
+          detail:
+            'آؤٹ ڈور واٹر پروف نائٹ ویژن کیمرے، محفوظ پائپ وائرنگ، PoE سوئچز اور 30 دن کی NVR ریکارڈنگ کا کامیاب سیٹ اپ۔',
+        },
+        {
+          title: 'ملٹی فلور وائی فائی اور انٹرنیٹ سیٹ اپ — سوات ویلی',
+          metric: '32 ایکسیس پوائنٹس · مکمل کوریج',
+          detail:
+            'ڈوئل بینڈ سیلنگ وائی فائی، مائیکروٹک اسپیڈ کنٹرول اور ڈوئل انٹرنیٹ بیک اپ کی تنصیب۔',
+        },
+        {
+          title: 'آفس لین کیبلنگ، فائبر اور سرور ریک سیٹ اپ',
+          metric: '60+ ٹیسٹڈ پوائنٹس · صاف سرور ریک',
+          detail:
+            'Cat6 کیبلنگ، فائبر اپ لنک، پیچ پینل ڈریسنگ اور پورے دفتر کے سست نیٹ ورک کی بحالی۔',
+        },
+      ],
+    },
+    contact: {
+      kicker: 'براہ راست بکنگ',
+      title: 'مینگورہ اور سوات میں فیض اللہ خان کو کال یا واٹس ایپ کریں',
+      desc: 'سی سی ٹی وی کیمرے لگوانے ہوں، وائی فائی ٹھیک کرانا ہو یا آفس نیٹ ورکنگ بنوانی ہو—0342-1229495 پر کال کریں یا نیچے تفصیل براہ راست واٹس ایپ پر بھیجیں۔',
+      phoneLabel: 'فون اور واٹس ایپ نمبر',
+      areaLabel: 'سروس کا علاقہ',
+      areaValue: 'مینگورہ، سوات، خیبر پختونخوا، پاکستان',
+      form: {
+        nameLabel: 'آپ کا نام',
+        namePlaceholder: 'مثلاً طارق محمود',
+        nameError: 'براہ کرم اپنا نام درج کریں۔',
+        phoneLabel: 'فون / واٹس ایپ نمبر',
+        phonePlaceholder: '03XX-XXXXXXX',
+        phoneError: 'براہ کرم درست فون نمبر درج کریں۔',
+        locationLabel: 'علاقہ / لوکیشن',
+        locationPlaceholder: 'مینگورہ، سیدو شریف، مٹہ...',
+        locationError: 'براہ کرم مینگورہ یا سوات کا علاقہ لکھیں۔',
+        serviceLabel: 'مطلوبہ کام',
+        services: [
+          'سی سی ٹی وی سیکیورٹی کیمرہ تنصیب',
+          'وائی فائی راؤٹر اور کوریج سیٹ اپ',
+          'لین کیبلنگ اور فائبر نیٹ ورکنگ',
+          'راؤٹر سیٹنگ اور خرابی کی مرمت',
+          'گھر / دکان / آفس کا مکمل سیٹ اپ',
+        ],
+        detailsLabel: 'کام کی تفصیل (اختیاری)',
+        detailsPlaceholder: 'کیمروں کی تعداد، منزلیں یا مسئلے کی تفصیل...',
+        submitBtn: 'واٹس ایپ پر بھیجیں',
+        orCall: 'یا براہ راست کال کریں:',
+        successTitle: 'واٹس ایپ میسج تیار ہے',
+        successDesc1: 'شکریہ،',
+        successDesc2: '۔ آپ کی سروس کی تفصیل واٹس ایپ نمبر',
+        successDesc3: 'کے لیے تیار ہے—اگر واٹس ایپ خود نہ کھلے تو نیچے بٹن دبائیں۔',
+        sendWhatsapp: 'واٹس ایپ کھولیں اور بھیجیں',
+        editBtn: 'نئی درخواست بھیجیں',
+      },
+    },
+    footer: {
+      roleLine: 'وائی فائی، سی سی ٹی وی اور نیٹ ورکنگ ٹیکنیشن · مینگورہ، سوات',
+      links: {
+        ptclOffers: 'پی ٹی سی ایل آفرز',
+        hardware: 'تھری ڈی ہارڈویئر',
+        workflow: 'سسٹم فلو',
+        services: 'خدمات',
+        contact: 'رابطہ',
+      },
+    },
+  },
+} as const;
