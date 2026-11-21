@@ -155,8 +155,7 @@ export default function App() {
     t.contact.form.services[formState.serviceIndex] ?? t.contact.form.services[0];
 
   const whatsappSummaryUrl = `https://wa.me/923421229495?text=${encodeURIComponent(
-    `Assalam-o-Alaikum Faizullah Khan, I need technician service.\nName: ${formState.name.trim()}\nPhone: ${formState.phone.trim()}\nLocation: ${formState.location.trim()}\nService: ${selectedServiceLabel}${
-      formState.details.trim() ? `\nDetails: ${formState.details.trim()}` : ''
+    `Assalam-o-Alaikum Faizullah Khan, I need technician service.\nName: ${formState.name.trim()}\nPhone: ${formState.phone.trim()}\nLocation: ${formState.location.trim()}\nService: ${selectedServiceLabel}${formState.details.trim() ? `\nDetails: ${formState.details.trim()}` : ''
     }`
   )}`;
 
@@ -216,6 +215,7 @@ export default function App() {
                 fill="none"
                 aria-hidden="true"
               >
+
                 <circle cx="16" cy="16" r="13.5" stroke="#65B32E" strokeWidth="2.5" strokeDasharray="64 16" />
                 <circle cx="16" cy="16" r="8.5" stroke="#007A33" strokeWidth="2.2" strokeDasharray="38 12" />
                 <circle cx="16" cy="16" r="3.4" fill="#007A33" />
@@ -264,11 +264,10 @@ export default function App() {
                   type="button"
                   onClick={() => handleLanguageChange('en')}
                   aria-pressed={lang === 'en'}
-                  className={`px-2 sm:px-2.5 py-1 min-h-[32px] sm:min-h-[34px] rounded-lg text-[11px] sm:text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap ${
-                    lang === 'en'
+                  className={`px-2 sm:px-2.5 py-1 min-h-[32px] sm:min-h-[34px] rounded-lg text-[11px] sm:text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap ${lang === 'en'
                       ? 'bg-white dark:bg-sky-600 text-slate-950 dark:text-white shadow-sm'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white'
-                  }`}
+                    }`}
                 >
                   <span className="sm:hidden">{t.controls.englishShort}</span>
                   <span className="hidden sm:inline">{t.controls.english}</span>
@@ -277,11 +276,10 @@ export default function App() {
                   type="button"
                   onClick={() => handleLanguageChange('ur')}
                   aria-pressed={lang === 'ur'}
-                  className={`px-2 sm:px-3 py-1 min-h-[32px] sm:min-h-[34px] rounded-lg text-[11px] sm:text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap ${
-                    lang === 'ur'
+                  className={`px-2 sm:px-3 py-1 min-h-[32px] sm:min-h-[34px] rounded-lg text-[11px] sm:text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap ${lang === 'ur'
                       ? 'bg-white dark:bg-sky-600 text-slate-950 dark:text-white shadow-sm'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white'
-                  }`}
+                    }`}
                 >
                   {t.controls.urdu}
                 </button>
@@ -375,22 +373,20 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => handleLanguageChange('en')}
-                      className={`py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${
-                        lang === 'en'
+                      className={`py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${lang === 'en'
                           ? 'bg-white dark:bg-sky-600 text-slate-950 dark:text-white shadow-sm'
                           : 'text-slate-600 dark:text-slate-400'
-                      }`}
+                        }`}
                     >
                       {t.controls.englishShort}
                     </button>
                     <button
                       type="button"
                       onClick={() => handleLanguageChange('ur')}
-                      className={`py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${
-                        lang === 'ur'
+                      className={`py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${lang === 'ur'
                           ? 'bg-white dark:bg-sky-600 text-slate-950 dark:text-white shadow-sm'
                           : 'text-slate-600 dark:text-slate-400'
-                      }`}
+                        }`}
                     >
                       {t.controls.urdu}
                     </button>
@@ -405,11 +401,10 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => setTheme('light')}
-                      className={`inline-flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${
-                        theme === 'light'
+                      className={`inline-flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${theme === 'light'
                           ? 'bg-white text-slate-950 shadow-sm'
                           : 'text-slate-600 dark:text-slate-400'
-                      }`}
+                        }`}
                     >
                       <Sun className="w-3 h-3 text-amber-500" />
                       <span>{t.controls.light}</span>
@@ -417,11 +412,10 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => setTheme('dark')}
-                      className={`inline-flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${
-                        theme === 'dark'
+                      className={`inline-flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-semibold cursor-pointer ${theme === 'dark'
                           ? 'bg-slate-800 text-white shadow-sm'
                           : 'text-slate-600 dark:text-slate-400'
-                      }`}
+                        }`}
                     >
                       <Moon className="w-3 h-3 text-sky-400" />
                       <span>{t.controls.dark}</span>
@@ -1127,11 +1121,10 @@ export default function App() {
                               aria-expanded={serviceMenuOpen}
                               aria-labelledby="contact-service-label contact-service"
                               onClick={() => setServiceMenuOpen((prev) => !prev)}
-                              className={`w-full px-3 py-2 min-h-[46px] rounded-xl border text-base sm:text-sm text-slate-900 dark:text-slate-100 bg-white dark:bg-slate-950 flex items-center justify-between gap-2.5 transition-all cursor-pointer focus:outline-none ${
-                                serviceMenuOpen
+                              className={`w-full px-3 py-2 min-h-[46px] rounded-xl border text-base sm:text-sm text-slate-900 dark:text-slate-100 bg-white dark:bg-slate-950 flex items-center justify-between gap-2.5 transition-all cursor-pointer focus:outline-none ${serviceMenuOpen
                                   ? 'border-emerald-500 ring-2 ring-emerald-500/35'
                                   : 'border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/35'
-                              }`}
+                                }`}
                             >
                               <span className="flex items-center gap-2.5 min-w-0">
                                 <span className="w-7 h-7 rounded-lg bg-emerald-500/12 dark:bg-emerald-500/15 text-[#007A33] dark:text-emerald-400 flex items-center justify-center shrink-0">
@@ -1142,9 +1135,8 @@ export default function App() {
                                 </span>
                               </span>
                               <ChevronDown
-                                className={`w-4 h-4 text-slate-500 dark:text-slate-400 shrink-0 transition-transform duration-200 ${
-                                  serviceMenuOpen ? 'rotate-180 text-emerald-600 dark:text-emerald-400' : ''
-                                }`}
+                                className={`w-4 h-4 text-slate-500 dark:text-slate-400 shrink-0 transition-transform duration-200 ${serviceMenuOpen ? 'rotate-180 text-emerald-600 dark:text-emerald-400' : ''
+                                  }`}
                               />
                             </button>
 
@@ -1173,19 +1165,17 @@ export default function App() {
                                         }));
                                         setServiceMenuOpen(false);
                                       }}
-                                      className={`w-full flex items-center justify-between gap-2.5 px-2.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-colors cursor-pointer ${
-                                        isSelected
+                                      className={`w-full flex items-center justify-between gap-2.5 px-2.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-colors cursor-pointer ${isSelected
                                           ? 'bg-emerald-50 dark:bg-emerald-500/15 text-[#007A33] dark:text-emerald-300'
                                           : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80'
-                                      }`}
+                                        }`}
                                     >
                                       <span className="flex items-center gap-2.5 min-w-0">
                                         <span
-                                          className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${
-                                            isSelected
+                                          className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${isSelected
                                               ? 'bg-[#007A33] dark:bg-emerald-500 text-white'
                                               : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'
-                                          }`}
+                                            }`}
                                         >
                                           <OptionIcon className="w-3.5 h-3.5" />
                                         </span>
